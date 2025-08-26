@@ -61,3 +61,14 @@ cacheSolve <- function(x, ...) {
   m
   
 }
+
+# Example usage:
+
+# 1. Create a special matrix object
+myMatrix <- makeCacheMatrix(matrix(c(1, 2, 3, 4), nrow=2, ncol=2))
+
+# 2. Compute the inverse of the matrix (this will compute and cache the result)
+cacheSolve(myMatrix)
+
+# 3. Calling cacheSolve again will return the cached result
+cacheSolve(myMatrix)
